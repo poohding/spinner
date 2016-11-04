@@ -12,10 +12,10 @@
     }
 
     .spinner__increase {
-        @include sprite($sp_arrow_up_blue);
+        @include sprite($sp_arrow_up);
     }
 
     .spinner__decrease {
-        @include sprite($sp_arrow_down_blue);
+        @include sprite($sp_arrow_down);
     }
 }

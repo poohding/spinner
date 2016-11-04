@@ -8,6 +8,16 @@ SCSS variables are information about icon's compiled state, stored under its ori
 The large array-like variables contain all information about a single icon
 $icon-home: x y offset_x offset_y width height total_width total_height image_path;
 */
+$sp_arrow_down-x: 26px;
+$sp_arrow_down-y: 0px;
+$sp_arrow_down-offset-x: -26px;
+$sp_arrow_down-offset-y: 0px;
+$sp_arrow_down-width: 16px;
+$sp_arrow_down-height: 16px;
+$sp_arrow_down-total-width: 42px;
+$sp_arrow_down-total-height: 42px;
+$sp_arrow_down-image: '../img/sp_icons.png';
+$sp_arrow_down: 26px 0px -26px 0px 16px 16px 42px 42px '../img/sp_icons.png';
 $sp_arrow_down_blue-x: 0px;
 $sp_arrow_down_blue-y: 0px;
 $sp_arrow_down_blue-offset-x: 0px;
@@ -15,19 +25,29 @@ $sp_arrow_down_blue-offset-y: 0px;
 $sp_arrow_down_blue-width: 16px;
 $sp_arrow_down_blue-height: 16px;
 $sp_arrow_down_blue-total-width: 42px;
-$sp_arrow_down_blue-total-height: 16px;
+$sp_arrow_down_blue-total-height: 42px;
 $sp_arrow_down_blue-image: '../img/sp_icons.png';
-$sp_arrow_down_blue: 0px 0px 0px 0px 16px 16px 42px 16px '../img/sp_icons.png';
-$sp_arrow_up_blue-x: 26px;
-$sp_arrow_up_blue-y: 0px;
-$sp_arrow_up_blue-offset-x: -26px;
-$sp_arrow_up_blue-offset-y: 0px;
+$sp_arrow_down_blue: 0px 0px 0px 0px 16px 16px 42px 42px '../img/sp_icons.png';
+$sp_arrow_up-x: 26px;
+$sp_arrow_up-y: 26px;
+$sp_arrow_up-offset-x: -26px;
+$sp_arrow_up-offset-y: -26px;
+$sp_arrow_up-width: 16px;
+$sp_arrow_up-height: 16px;
+$sp_arrow_up-total-width: 42px;
+$sp_arrow_up-total-height: 42px;
+$sp_arrow_up-image: '../img/sp_icons.png';
+$sp_arrow_up: 26px 26px -26px -26px 16px 16px 42px 42px '../img/sp_icons.png';
+$sp_arrow_up_blue-x: 0px;
+$sp_arrow_up_blue-y: 26px;
+$sp_arrow_up_blue-offset-x: 0px;
+$sp_arrow_up_blue-offset-y: -26px;
 $sp_arrow_up_blue-width: 16px;
 $sp_arrow_up_blue-height: 16px;
 $sp_arrow_up_blue-total-width: 42px;
-$sp_arrow_up_blue-total-height: 16px;
+$sp_arrow_up_blue-total-height: 42px;
 $sp_arrow_up_blue-image: '../img/sp_icons.png';
-$sp_arrow_up_blue: 26px 0px -26px 0px 16px 16px 42px 16px '../img/sp_icons.png';
+$sp_arrow_up_blue: 0px 26px 0px -26px 16px 16px 42px 42px '../img/sp_icons.png';
 
 /*
 The provided mixins are intended to be used with the array-like variables

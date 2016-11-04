@@ -29,14 +29,14 @@ The provided mixins are intended to be used with the array-like variables
 
 .spinner .spinner__increase {
   background-image: url(../img/sp_icons.png);
-  background-position: -26px 0px;
+  background-position: -26px -26px;
   width: 16px;
   height: 16px;
 }
 
 .spinner .spinner__decrease {
   background-image: url(../img/sp_icons.png);
-  background-position: 0px 0px;
+  background-position: -26px 0px;
   width: 16px;
   height: 16px;
 }
