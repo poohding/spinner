@@ -1,6 +1,6 @@
 {
   "name": "spinner",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "directories": {
     "doc": "doc"
@@ -9,9 +9,10 @@
     "clean": "rimraf dist",
     "spritesmith": "spritesmith --rc .spritesmith.js && imagemin dist/tmp/* -o dist/img && rimraf dist/tmp",
     "sass": "node-sass --output-style expanded --source-map true src/sass/*.scss -o dist/css/",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
 
     "build:spritesmith": "npm run spritesmith",
-    "build:css": "npm run sass",
+    "build:css": "npm-run-all --sequential sass autoprefixer",
     "build": "npm run clean && npm-run-all --sequential build:*",
 
     "watch:css": "onchange \"src/sass\" -- npm run build:css",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/poohding/spinner#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.1",
     "browser-sync": "^2.17.5",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^3.10.1",
