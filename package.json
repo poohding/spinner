@@ -1,6 +1,6 @@
 {
   "name": "spinner",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "directories": {
     "doc": "doc"
@@ -13,9 +13,12 @@
 
     "build:spritesmith": "npm run spritesmith",
     "build:css": "npm-run-all --sequential sass autoprefixer",
+    "dev:js": "webpack -d --watch --config webpack.dev.config.js",
+    "build:js": "webpack -p --config webpack.prd.config.js",
     "build": "npm run clean && npm-run-all --sequential build:*",
 
     "watch:css": "onchange \"src/sass\" -- npm run build:css",
+    "watch:js": "onchange \"src/js\" -- npm run dev:js",
     "watch": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --server --port 8081 --directory --no-ui --files \"dist/**/*.*, doc/**/*.*\"",
     "start": "npm run build && npm-run-all --parallel serve watch"
@@ -32,6 +35,9 @@
   "homepage": "https://github.com/poohding/spinner#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.1",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
     "browser-sync": "^2.17.5",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^3.10.1",
@@ -39,7 +45,8 @@
     "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
     "rimraf": "^2.5.4",
-    "spritesmith-cli": "^1.1.2"
+    "spritesmith-cli": "^1.1.2",
+    "webpack": "^1.13.3"
   },
   "dependencies": {
     "reset.scss": "^1.0.0"
