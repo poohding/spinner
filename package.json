@@ -1,0 +1,38 @@
+{
+  "name": "spinner",
+  "version": "0.0.1",
+  "description": "",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "spritesmith": "spritesmith --rc .spritesmith.js && imagemin dist/tmp/* -o dist/img && rimraf dist/tmp",
+    "sass": "node-sass --output-style expanded --source-map true src/sass/*.scss -o dist/css/",
+
+    "build:spritesmith": "npm run spritesmith",
+    "build:css": "npm run sass",
+    "build": "npm run clean && npm-run-all --sequential build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poohding/spinner.git"
+  },
+  "author": "poohding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poohding/spinner/issues"
+  },
+  "homepage": "https://github.com/poohding/spinner#readme",
+  "devDependencies": {
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^3.10.1",
+    "npm-run-all": "^3.1.1",
+    "postcss-cli": "^2.6.0",
+    "rimraf": "^2.5.4",
+    "spritesmith-cli": "^1.1.2"
+  },
+  "dependencies": {
+    "reset.scss": "^1.0.0"
+  }
+}

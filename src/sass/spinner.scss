@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@import "../../dist/sass/generated/icons";
+
+.spinner {
+    button {
+        padding:0;
+        background-color:inherit;
+        border:none;
+        text-indent: 100%;
+        overflow:hidden;
+    }
+
+    .spinner__increase {
+        @include sprite($sp_arrow_up_blue);
+    }
+
+    .spinner__decrease {
+        @include sprite($sp_arrow_down_blue);
+    }
+}

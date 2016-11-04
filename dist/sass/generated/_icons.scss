@@ -1,0 +1,67 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$sp_arrow_down_blue-x: 0px;
+$sp_arrow_down_blue-y: 0px;
+$sp_arrow_down_blue-offset-x: 0px;
+$sp_arrow_down_blue-offset-y: 0px;
+$sp_arrow_down_blue-width: 16px;
+$sp_arrow_down_blue-height: 16px;
+$sp_arrow_down_blue-total-width: 42px;
+$sp_arrow_down_blue-total-height: 16px;
+$sp_arrow_down_blue-image: '../img/sp_icons.png';
+$sp_arrow_down_blue: 0px 0px 0px 0px 16px 16px 42px 16px '../img/sp_icons.png';
+$sp_arrow_up_blue-x: 26px;
+$sp_arrow_up_blue-y: 0px;
+$sp_arrow_up_blue-offset-x: -26px;
+$sp_arrow_up_blue-offset-y: 0px;
+$sp_arrow_up_blue-width: 16px;
+$sp_arrow_up_blue-height: 16px;
+$sp_arrow_up_blue-total-width: 42px;
+$sp_arrow_up_blue-total-height: 16px;
+$sp_arrow_up_blue-image: '../img/sp_icons.png';
+$sp_arrow_up_blue: 26px 0px -26px 0px 16px 16px 42px 16px '../img/sp_icons.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}

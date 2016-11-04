@@ -1,0 +1,44 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+.spinner button {
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.spinner .spinner__increase {
+  background-image: url(../img/sp_icons.png);
+  background-position: -26px 0px;
+  width: 16px;
+  height: 16px;
+}
+
+.spinner .spinner__decrease {
+  background-image: url(../img/sp_icons.png);
+  background-position: 0px 0px;
+  width: 16px;
+  height: 16px;
+}
+
+/*# sourceMappingURL=spinner.css.map */
