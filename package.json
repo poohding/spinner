@@ -1,6 +1,6 @@
 {
   "name": "spinner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "directories": {
     "doc": "doc"
@@ -12,7 +12,12 @@
 
     "build:spritesmith": "npm run spritesmith",
     "build:css": "npm run sass",
-    "build": "npm run clean && npm-run-all --sequential build:*"
+    "build": "npm run clean && npm-run-all --sequential build:*",
+
+    "watch:css": "onchange \"src/sass\" -- npm run build:css",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server --port 8081 --directory --no-ui --files \"dist/**/*.*, doc/**/*.*\"",
+    "start": "npm run build && npm-run-all --parallel serve watch"
   },
   "repository": {
     "type": "git",
@@ -25,9 +30,11 @@
   },
   "homepage": "https://github.com/poohding/spinner#readme",
   "devDependencies": {
+    "browser-sync": "^2.17.5",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^3.10.1",
     "npm-run-all": "^3.1.1",
+    "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
     "rimraf": "^2.5.4",
     "spritesmith-cli": "^1.1.2"
