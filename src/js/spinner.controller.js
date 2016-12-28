@@ -20,7 +20,7 @@ export default class SpinnerController {
             this.onClickIncrease();
         }.bind(this));
 
-        document.querySelector('.spinner__decrease').addEventListener('click', function(e) {
+        document.querySelector(`.spinner__decrease`).addEventListener('click', function(e) {
             e.preventDefault();
 
             this.onClickDecrease();
